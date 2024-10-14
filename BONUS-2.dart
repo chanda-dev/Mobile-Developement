@@ -4,6 +4,7 @@ void main(List<String> args) {
   isBalance('{what is (42)}');
   isBalance('[text}');
   isBalance('{[[(a)b]c]d}');
+  isBalance('{');
 }
 
 void isBalance (String input) {
@@ -22,7 +23,7 @@ void isBalance (String input) {
       
     } else if(marching.containsKey(splitInput[i])){
       
-      if(stack.removeLast() != marching[splitInput[i]]){  
+      if (stack.isEmpty || stack.removeLast() != marching[splitInput[i]]){  
          // the first stack.removeLast is [ 
          //and marching[]] = [ 
          //so it equal, make it Balance
@@ -33,6 +34,10 @@ void isBalance (String input) {
       
     } 
   }
-  print('Balance');
+  if(stack.isEmpty == false){
+    print('Not Balance');
+  } else {
+    print('Balance');
+  }
   
 }
