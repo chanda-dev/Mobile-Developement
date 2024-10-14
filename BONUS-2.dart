@@ -23,7 +23,7 @@ void isBalance (String input) {
       
     } else if(marching.containsKey(splitInput[i])){
       
-      if (stack.isEmpty || stack.removeLast() != marching[splitInput[i]]){  
+      if (stack.removeLast() != marching[splitInput[i]]){  
          // the first stack.removeLast is [ 
          //and marching[]] = [ 
          //so it equal, make it Balance
@@ -35,8 +35,10 @@ void isBalance (String input) {
     } 
   }
   if(stack.isEmpty == false){
+    // print(stack);
     print('Not Balance');
   } else {
+    // print(stack);
     print('Balance');
   }
   
