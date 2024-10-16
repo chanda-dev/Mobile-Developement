@@ -31,6 +31,10 @@ class Distance{
   String toString(){
     return 'value $result $unit';
   }
+
+  Distance operator +(covariant Distance d){
+    return Distance(unit, this.value + d.value);
+  }
 }
 
 void main(List<String> args) {
@@ -40,4 +44,7 @@ void main(List<String> args) {
   d2.convert();
   print(d1);
   print(d2);
+  print((d2+d1));
+
+  // I don't know how to add 2 distance,[print(d1 + d2).kms]
 }
