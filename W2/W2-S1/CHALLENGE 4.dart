@@ -1,24 +1,24 @@
-
+enum Unit{cms,meters,kms}
 
 class Distance{
-  final String unit;
+  final Unit unit;
   final double value;
   Distance(this.unit,this.value);
   Distance.cms(this.value)
-   : unit = 'cms'; 
+   : unit =Unit.cms; 
 
   Distance.meters(this.value)
-   : unit = 'meters';
+   : unit = Unit.meters;
   Distance.kms(this.value)
-   : unit = 'kms';
+   : unit = Unit.kms;
 
    double convert(){
     switch(unit){
-      case 'cms':
+      case Unit.cms:
         return value * 1;
-      case 'kms':
+      case Unit.kms:
         return value * 100000;
-      case 'meters':
+      case Unit.meters:
         return value * 100;
       default :
       return value;
@@ -29,11 +29,11 @@ class Distance{
     return convert();
   }
   String toString(){
-    return 'value $result $unit';
+    return 'value $result cms';
   }
 
   Distance operator +(covariant Distance d){
-    return Distance(unit, this.value + d.value);
+    return Distance(Unit.cms, this.value + d.value);
   }
 }
 
@@ -44,7 +44,7 @@ void main(List<String> args) {
   d2.convert();
   print(d1);
   print(d2);
-  print((d2+d1));
+  print((d1+d2));
 
   // I don't know how to add 2 distance,[print(d1 + d2).kms]
 }
