@@ -3,9 +3,6 @@
   step 2 write on paper or disccuss about algorithm
   step3 write code
 */
-
-
-import 'dart:io';
  
 void main()
 {
