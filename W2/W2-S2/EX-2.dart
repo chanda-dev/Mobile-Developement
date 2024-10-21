@@ -9,7 +9,7 @@ class BankAccount {
 
   final  String? _accountPin;
 
-  double? balance;
+  double? _balance;
 
   
 
@@ -28,7 +28,10 @@ class BankAccount {
   String?  get accountPin{
     return _accountPin;
   }
-
+  
+  double? get balance{
+    return _balance;
+  }
  
   
 
@@ -36,14 +39,15 @@ class BankAccount {
               this._accountNumber, 
               this._phoneNumber, 
               this._accountPin, 
-              this.balance);
+              this._balance);
 
 void withDraw( double amount, String pin){
   if(pin == accountPin){
       if(balance! < amount || amount < 0){
         throw Exception('iffueince balance');
       }
-      balance = balance! - amount;
+      this._balance = balance! - amount;
+      print('transaction complete');
   } else {
     print('Wrong Pin');
   }
@@ -53,7 +57,7 @@ void withDraw( double amount, String pin){
 void credit(double amount, String pin){
   if(pin == accountPin){
     if(amount > 0){
-      balance = balance! + amount;
+      this._balance = balance! + amount;
     } else {
       print('Wrong input amount');
     }
@@ -102,10 +106,12 @@ void main() {
 
   BankAccount ba1 = BankAccount('chanda', '458796', '0964109534', '3548', 1000);
   try {
-    ba1.withDraw(2000,'3548'); // This will throw an exception
+    ba1.withDraw(900,'3548'); // This will throw an exception
   } catch (e) {
     print(e); // Output: Insufficient balance for withdrawal!
   }
+
+  ba1.credit(100,'3548');
   //ba1.withDraw(1000,'3548');
   print('Your current balance is:${ba1.balance}');
 
