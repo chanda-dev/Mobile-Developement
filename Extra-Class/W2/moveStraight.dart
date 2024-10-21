@@ -4,13 +4,16 @@
   step3 write code
 */
  
+import 'dart:io';
+
 void main()
 {
     // Read input from STDIN
-    //String? instructions  = stdin.readLineSync(); 
-    String instructions = 'da';
+    print('pls input');
+    String? instructions  = stdin.readLineSync(); 
+    //String instructions = 'da';
     int position = 0;
-    List<String> split =  instructions.split('');
+    List<String> split =  instructions!.split('');
     for(var i  = 0;i<split.length;i++){
         if(split[i] == "R"){
             position+= 1;
