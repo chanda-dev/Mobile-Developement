@@ -16,25 +16,31 @@ class MyButton extends StatelessWidget {
   final Buttons? color;
   final Buttons? label;
   final Buttons? icon;
-
-  const MyButton({super.key,this.color,required this.label,required this.icon});
+  final String position;
+  
+  const MyButton({super.key,this.color,required this.label,required this.icon,this.position='left'});
 
   @override
   Widget build(BuildContext context) {
-    return TextButton.icon(onPressed: onPressed, 
+
+    return 
+    Container(
+      margin: const EdgeInsets.all(20),
+    child: TextButton.icon(onPressed: onPressed, 
     label: Text(
+      
       '${label!.label}',
       style: const TextStyle(
         decoration: TextDecoration.none,
       ),
     ),
-    icon: Icon(icon!.icon),
+    icon: Icon(icon!.icon,  
+    ),
     style: ButtonStyle(
       backgroundColor: WidgetStatePropertyAll(color!.color),
-      minimumSize: const WidgetStatePropertyAll(Size(600, 50)),
-      
+      minimumSize: const WidgetStatePropertyAll(Size(600, 50)),  
     ),
-    
+    )
     );
   }
 }
@@ -53,7 +59,9 @@ void main() {
             ),
         ),
         body: const Column(
+          
           children: [
+            
             MyButton(label: Buttons.primary, icon: Buttons.primary,color: Buttons.primary,),
             MyButton(label: Buttons.secondary, icon: Buttons.secondary,color: Buttons.secondary,),
             MyButton(label: Buttons.disabled, icon: Buttons.disabled,color: Buttons.disabled,),
