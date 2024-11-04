@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 enum Product {
   dart('DART','the best object language','assets/assetsW4/dart.png'),
   flutter('FLUTTER','the best mobile widget library','assets/assetsW4/flutter.png'),
-  firebase('FLUTTER','the best cloud database','assets/assetsW4/firebase.png');
+  firebase('FIREBASE','the best cloud database','assets/assetsW4/firebase.png');
 
   const Product(this.name,this.description,this.image);
   final String name;
