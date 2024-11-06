@@ -37,7 +37,6 @@ class _DiceRollerState extends State<DiceRoller> {
       mainAxisSize: MainAxisSize.min,
       children: [
         Image.asset(
-          
           image,
           width: 200,
         ),
