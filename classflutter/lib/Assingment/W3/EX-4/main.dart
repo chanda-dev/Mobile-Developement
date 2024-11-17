@@ -28,6 +28,8 @@ const CustomCard({super.key,this.text,this.color});
 }
 
 
+
+
 class ConlumbGradient extends StatelessWidget {
 final  String? text;
 final Color? color;
