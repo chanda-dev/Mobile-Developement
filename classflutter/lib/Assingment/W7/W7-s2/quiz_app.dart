@@ -1,3 +1,5 @@
+import 'package:classflutter/Assingment/W7/W7-s2/screens/question_screen.dart';
+import 'package:classflutter/Assingment/W7/W7-s2/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'model/quiz.dart';
 
@@ -13,19 +15,25 @@ class QuizApp extends StatefulWidget {
 }
 
 class _QuizAppState extends State<QuizApp> {
-  
+  bool switchScreen = true;
+void doQuizz(){
+  setState(() {
+    switchScreen = !switchScreen;
+  });
+}
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: appColor,
-        body: const Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('TODO !'),
-            ],
-          ),
+        body: Center(
+          child: Builder(builder: (BuildContext context){
+            if(switchScreen){
+              return WelcomeScreen(startQuiz: doQuizz,);
+            } else{
+              return const QuestionScreen();
+            }
+          })
         ),
       ),
     );
