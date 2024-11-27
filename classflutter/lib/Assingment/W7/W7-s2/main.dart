@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'quiz_app.dart';
 import 'model/quiz.dart';
 
-enum QuizState  {notStated,started,finished}
+
 
 void main() {
 

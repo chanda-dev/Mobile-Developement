@@ -51,6 +51,7 @@ class Submission{
       }
     }
   }
+  
   void removeAnswer(){
     allAnswer.clear();
   }
