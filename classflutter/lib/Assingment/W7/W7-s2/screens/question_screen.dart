@@ -11,17 +11,30 @@ class QuestionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         ...getQuestions.map((e)=>
           Column(
+            
             children: [
-              Text(e.title),
+              
               Text('${index+1}',style: const TextStyle(color: Colors.black,decoration: TextDecoration.none),),
-              Text(e.questions[index].title),
+              
+              Text(e.questions[index].title,
+                style: const TextStyle(color: Colors.white,fontSize: 20),
+              ),
+              const SizedBox(height: 20,),
               ...e.questions[index].possibleAnswers.map((answer)=>
                 Column(
                   children: [
-                    TextButton(onPressed:() => chooseAnswer(answer,e.questions[index]), child: Text(answer))
+                    const SizedBox(height: 20,),
+                    TextButton(onPressed:() => chooseAnswer(answer,e.questions[index]), child: Container(
+                      
+                      width: 200,height: 50,decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(10)),
+                      padding: const EdgeInsets.fromLTRB(80, 15, 0, 0),
+                      child: Text(answer,style: const TextStyle(color: Colors.white,fontSize: 15,)),
+                    ))
                   ],
                 )
               ), 

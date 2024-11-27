@@ -28,6 +28,17 @@ void goQuestionScreen(){
 
 }
 
+void restartQuiz(){
+  setState(() {
+    for(int j = 0;j<widget.sub.length;j++){
+      widget.sub[j].removeAnswer();
+    }
+    
+    quizState = QuizState.started;
+    i=0;
+  });
+}
+
 void chooseCorrectAnswer(String retrieveAnswer,Question retrieveQues){
   
   setState(() {
@@ -58,9 +69,9 @@ void chooseCorrectAnswer(String retrieveAnswer,Question retrieveQues){
             } else if(quizState == QuizState.started){
               return QuestionScreen(getQuestions: [widget.quiz],chooseAnswer: chooseCorrectAnswer,index: i,);
             } else if (quizState == QuizState.finished){
-              return  ResultScreen(submissions: widget.sub,);
+              return  ResultScreen(submissions: widget.sub,restart: restartQuiz,);
             } else {
-              return ResultScreen(submissions: widget.sub,);
+              return ResultScreen(submissions: widget.sub,restart: restartQuiz,);
             }
           })
         ),
