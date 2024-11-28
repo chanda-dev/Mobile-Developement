@@ -68,10 +68,6 @@ void main(){
       title: "Who is the best gammer?",
       possibleAnswers: ["ronan", "hongly", 'leangsiv'],
       goodAnswer: 'hongly');
-      Question q3 = const Question(
-      title: "Who is the best cooker?",
-      possibleAnswers: ["ronan", "hongly", 'leangsiv'],
-      goodAnswer: 'leangsiv');
   Answer a2 = Answer(questionAnswer: 'hongly', question: q2);
   Answer answer = Answer(questionAnswer: 'ronan', question: q1);
   Submission submission = Submission(allAnswer: [answer,a2]);

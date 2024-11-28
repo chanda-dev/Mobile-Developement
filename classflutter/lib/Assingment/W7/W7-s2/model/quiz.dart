@@ -14,16 +14,3 @@ class Question {
   const Question({required this.title, required this.possibleAnswers, required this.goodAnswer});
 }
 
-// return Column(
-//                   children: [
-//                     Text(item.title),
-//                     ...item.possibleAnswers.map((a)=>
-//                       Column(
-//                         children: [
-//                           TextButton(onPressed: () => chooseAnswer(a,item), child: Text(a))
-//                         ],
-//                       )
-//                     )
-                    
-//                   ],
-//                 );

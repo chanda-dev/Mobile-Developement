@@ -1,6 +1,4 @@
-import 'package:classflutter/Assingment/W7/W7-s2/model/quiz.dart';
 import 'package:classflutter/Assingment/W7/W7-s2/model/submission.dart';
-import 'package:classflutter/Assingment/W7/W7-s2/quiz_app.dart';
 import 'package:flutter/material.dart';
 
 class ResultScreen extends StatelessWidget {
@@ -37,7 +35,7 @@ class ResultScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('Your answer is: ${answer.questionAnswer}'),
-                        Icon(Icons.check),
+                        const Icon(Icons.check),
                       ],
                     );
                   } else {
@@ -45,7 +43,7 @@ class ResultScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('Your answer is: ${answer.questionAnswer}'),
-                        Icon(Icons.close),
+                        const Icon(Icons.close),
                       ],
                     );
                   }

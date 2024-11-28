@@ -1,5 +1,4 @@
 import "package:classflutter/Assingment/W6/W6-S2/EXERCISE-4/main.dart";
-import "package:flutter/material.dart";
 class Jokes{
   List <FavoriteCard> favorites;
   bool isFavorite;

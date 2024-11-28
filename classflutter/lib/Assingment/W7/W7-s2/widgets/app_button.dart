@@ -17,7 +17,7 @@ class AppButton extends StatelessWidget {
     return ElevatedButton.icon(
         icon: Icon(icon),
         label: Text(label),
-        onPressed: onTap,
+        onPressed:onTap,
         style: OutlinedButton.styleFrom(
           padding: const EdgeInsets.symmetric(
             vertical: 10,

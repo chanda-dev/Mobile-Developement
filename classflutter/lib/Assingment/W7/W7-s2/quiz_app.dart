@@ -46,9 +46,6 @@ void chooseCorrectAnswer(String retrieveAnswer,Question retrieveQues){
     Answer answer = Answer(questionAnswer: retrieveAnswer, question: retrieveQues);
     Submission submission = Submission(allAnswer: [answer]);
     widget.sub.add(submission);
-    //print(submission.getScore()) ;
-    print('lenght');
-    print(widget.sub.length);
     if(i<widget.quiz.questions.length-1){
       i++;
     }else{
