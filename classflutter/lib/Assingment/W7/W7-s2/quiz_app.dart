@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:classflutter/Assingment/W7/W7-s2/model/submission.dart';
 import 'package:classflutter/Assingment/W7/W7-s2/screens/question_screen.dart';
 import 'package:classflutter/Assingment/W7/W7-s2/screens/result_screen.dart';

@@ -1,4 +1,6 @@
 
+// ignore_for_file: must_be_immutable
+
 import 'package:classflutter/Assingment/W7/W7-s2/model/quiz.dart';
 import 'package:classflutter/Assingment/W7/W7-s2/widgets/app_button.dart';
 import 'package:flutter/material.dart';

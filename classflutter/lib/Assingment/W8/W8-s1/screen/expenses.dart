@@ -1,8 +1,6 @@
 import 'package:classflutter/Assingment/W8/W8-s1/model/expense.dart';
 import 'package:classflutter/Assingment/W8/W8-s1/screen/expensesList.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/date_symbol_data_local.dart';
-import 'package:intl/intl.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});

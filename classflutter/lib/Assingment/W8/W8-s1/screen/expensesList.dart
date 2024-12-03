@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:classflutter/Assingment/W8/W8-s1/model/expense.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -17,7 +19,7 @@ class Expenseslist extends StatelessWidget {
         ...registerExpense.map((item)=>
             Container(
               padding: const EdgeInsets.all(20),
-              margin: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(20),
               decoration: const BoxDecoration(
                 color: Colors.amber,
               ),

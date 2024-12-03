@@ -9,7 +9,7 @@ enum Buttons {
   const Buttons(this.color, this.label,this.icon);
 }
 void onPressed() {
-  print('hi');
+  
 }
 
 class MyButton extends StatelessWidget {
