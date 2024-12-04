@@ -12,6 +12,11 @@ class ExpensesList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if(expenses.isEmpty){
+      return const Center(
+        child: Text('No expense found',style: TextStyle(color: Colors.black,decoration: TextDecoration.none)),
+      );
+    }
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: ListView.builder(

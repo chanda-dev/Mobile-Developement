@@ -28,11 +28,29 @@ class _ExpensesState extends State<Expenses> {
       category: Category.leisure,
     ),
   ];
-
-
+  void onUndo(Expense expense){
+    setState(() {
+      _registeredExpenses.add(expense);
+    });
+  }
   void onExpenseRemoved(Expense expense) {
+    
     setState(() {
       _registeredExpenses.remove(expense);
+      
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: const Text(
+            'Expense deleted',
+              style: 
+                TextStyle(
+                  color: Colors.white,
+                  decoration: TextDecoration.none),
+                  ),
+                  duration: const Duration(seconds: 3),
+                  action: SnackBarAction(label: 'Undo',textColor: Colors.blue, onPressed:()=> onUndo(expense)),
+                  )
+                  );
     });
   }
 

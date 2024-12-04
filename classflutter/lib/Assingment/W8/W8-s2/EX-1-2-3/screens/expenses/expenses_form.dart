@@ -115,17 +115,23 @@ class _ExpenseFormState extends State<ExpenseForm> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              DropdownButton(
-          value: dropDownValue,
-          items: allCategoryList.map((value){
-            return DropdownMenuItem(
-              value: value,
-              child: Text(value),
-            );
-          }).toList()
-          , onChanged: onAddCategory),
-          TextButton(onPressed: showDate, 
-          child: Text('$datePick',style: const TextStyle(color: Colors.blue,decoration: TextDecoration.none),))
+            Column(
+              children: [
+                const Text('Pick the Category',style: TextStyle(color: Colors.black,decoration: TextDecoration.none)),
+                      DropdownButton(
+                        value: dropDownValue,
+                        items: allCategoryList.map((value){
+                          return DropdownMenuItem(
+                            value: value,
+                            child: Text(value),
+                          );
+                        }).toList()
+                      , onChanged: onAddCategory),
+              ],
+            ),
+            
+            TextButton(onPressed: showDate, 
+              child: Text('$datePick',style: const TextStyle(color: Colors.blue,decoration: TextDecoration.none),))
 
             ],
           ),
