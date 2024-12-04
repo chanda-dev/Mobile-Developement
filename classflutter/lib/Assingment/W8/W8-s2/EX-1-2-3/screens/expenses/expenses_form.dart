@@ -61,7 +61,6 @@ class _ExpenseFormState extends State<ExpenseForm> {
     // 1- Get the values from inputs
     String title = _titleController.text;
     double amount = double.parse(_valueController.text);
-    allCategoryList.map((key){
       if(dropDownValue == 'LEISURE'){
         allCategory = Category.leisure;
       } else if(dropDownValue == 'FOOD'){
@@ -71,7 +70,6 @@ class _ExpenseFormState extends State<ExpenseForm> {
       } else {
         allCategory = Category.travel;
       }
-    });
     // 2- Create the expense
     Expense expense = Expense(
         title: title,
